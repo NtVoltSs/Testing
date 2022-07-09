@@ -1,1 +1,1445 @@
+<!DOCTYPE html>
+<!--
+/ Name: SleekBuy
+/ Author: qSeek
+/ Support: https://discord.gg/4sDtzrs
+-->
+<html lang="en">
+  <head>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>DynamicPvP | Welcome</title>
+
+    <link href="templates\209\css\style.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="shortcut icon" href="https://dunb17ur4ymx4.cloudfront.net/webstore/favicons/4184b0094a822193efcc8552bfaa58cf1d30d344.png">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+    
+        // SleekStore Settings
+        var serverip = 'dynamicpvp.net';
+        var port = 25565;
+        var default_theme = 'dark';
+        var particles_enabled = true; // true / false
+        
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        
+        _gaq.push(['_setAccount', 'UA-36735942-3']);
+        _gaq.push(['_trackPageview']);
+        
+                
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    
+    <style>:root {
+ --main-color: rgb(116,0,228);
+ --main-color-transparent: rgb(116,0,228,0.6); /* This is the same color as main-color but for header (because it is transparent), 
+											to convert --main-color to --main-color-transparent use 
+											this website: https://www.rgbtohex.net/hextorgb/ 
+											you will receive the color in this format rgb(x,x,x)
+											you will need to edit that to rgb(x,x,x,0.6);
+										   */
+  --sleek-logo-size: 350px; /* Change Header Logo Size */
+}
+
+
+body { 
+  background: #EFEFEF;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+html {
+      font-size: 14px;
+}
+.logo {
+     text-align: center;
+ }
+.body {
+    margin-top: -45px;
+}
+.logo img {
+    width: var(--sleek-logo-size);
+	max-width: 100%;
+    margin-bottom: 50px;
+    animation: pulse 4s infinite;
+    animation-timing-function: ease-in-out;
+    height: unset!important;
+}
+@keyframes pulse {
+	0% {
+        transform: scale(1);
+	}
+	50% {
+        transform: scale(1.1);
+	}
+	100% {
+        transform: scale(1);
+	}
+}
+.header {
+    background: var(--main-color-transparent);
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+.header .logo {
+    float: unset;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.headerbg {
+    position: absolute;
+    z-index: -1;
+    background: url(https://i.imgur.com/CDTcIBM.jpeg);
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    filter: blur(7px);
+}
+.navbar-default {
+    background: transparent;
+}
+.navbar {
+    border: 0;
+}
+.navbar-nav>li {
+    transition: 0.05s;
+    float: unset;
+    background: #fff;
+    border-radius: 7px;
+    margin-bottom: 12px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background: #fff;
+    border-left: 4px solid var(--main-color);
+    color: rgb(116,0,228);
+}
+.navbar-nav {
+    float: unset!important;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    padding: 0!important
+}
+.navbar-default .navbar-nav>li>a {
+    color: #373737;
+    font-weight: bold;
+    font-size: 15px;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: rgb(116,0,228);
+    border-left: 4px solid var(--main-color);
+}
+.dropdown-menu {
+    top: unset;
+    left: unset;
+}
+.topbar {
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+.topbar ul {
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+}
+.topbar .topbar-items {
+    float: left;
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.topbar ul li {
+    float: left;
+    margin: 0;
+    margin-right: 25px;
+}
+.topbar ul li a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.topbar-server {
+    margin-left: auto;  
+    text-align: right;
+
+}
+.topbar-server .text {
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #fff;    
+}
+.topbar-server .ip {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+}
+.panel-default>.panel-heading {
+    font-size: 14px;
+    background: transparent;
+    border: 0;
+    text-align: center;
+    color: var(--main-color);
+    font-weight: bold;
+    position: relative;
+}
+.panel-default {
+    background: #fff;
+    border: 0;
+}
+.panel-default>.panel-heading:after {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 4px;
+    right: calc(50% - 18px);
+    bottom: 2px;
+    background: var(--main-color);
+    border-radius: 3px;
+}
+.topbar-items i {
+    vertical-align: middle;
+    font-size: 18px;
+}
+.topbar-items .text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.profile {
+    background: #fff;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+}
+.profile .information img {
+    width: 45px;
+    border-radius: 8px;
+}
+.profile .information .avatar {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.profile .information {
+    display: flex;
+}
+.profile .information .info {
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    overflow: hidden;
+}
+.profile .information .info .main {
+	color: #828282;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.profile .information .info .sub {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.profile .information .settings {
+    display: flex;
+    margin-left: auto;
+    font-size: 20px;
+}
+.profile .information .settings div {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 10px;
+}
+.profile .information .settings .logout i {
+	color: #DB3434;
+}
+.profile .information .settings .basket i {
+	color: var(--main-color);
+}
+.announce .bar {
+	background: var(--main-color);
+	animation: rainbow 15s infinite;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.announce .bar .text {
+    margin-left: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.announce .bar i {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 28px;
+}
+.announce .bar .button {
+    z-index: 2;
+	margin-left: auto;
+	margin-top: auto;
+    margin-bottom: auto;
+    background: rgb(255,255,255, 0.2);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+.announce .bar .button a {
+	color: #fff;
+	font-weight: bold;	
+}
+.modal-content {
+    background-color: #efefef;
+}
+@keyframes rainbow {
+	0% {
+		background: var(--main-color);
+    }
+	20% {
+		background: #db3434;
+    }
+    40% {
+		background: #4ec344;
+    }
+	60% {
+		background: #db34a0;
+    }
+	80% {
+		background: #d8db34;
+    }
+	100% {
+		background: var(--main-color);
+    }                
+}
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+footer {
+    padding: 0!important;
+    margin: 0!important;
+    border: 0!important;
+}
+footer .seekutils {
+	background: #9C9C9C;
+}
+footer .seekrow {
+	display: flex;
+	justify-content: space-between;
+	padding: 25px 25px 25px 25px;
+}
+
+footer .seekutils img {
+	max-height: 250px;
+	max-width: 100%;
+	margin: auto;
+	display: block;
+}
+
+footer .seekutils .block {
+	flex: 1;
+	margin: 0px 35px 0px 35px;
+}
+
+.seekcopyright {
+	display: flex;
+	background: #C4C4C4;
+
+}
+
+.seekrow .left {
+	flex: 1;
+	font-weight: bold;
+    font-size: 12px;
+    color: #828282;
+    margin-top: auto;
+	margin-bottom: auto;
+
+}
+.seekrow .right {
+	flex: 1;
+
+}
+.seekrow .right img {
+	display: block;
+	margin-left: auto;
+	width: 32px;
+    filter: grayscale(1);
+    transition: 1s;
+}
+.seekrow .right img:hover {
+    filter: grayscale(0);
+}
+.seekrow .block .title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	color: #000000;
+	margin-bottom: 15px;
+	position: relative;
+}
+.seekrow .block .title:after {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 28px;
+    border-radius: 4px;
+    background: var(--main-color); 
+    left: calc(50% - 14px);
+    bottom: -6px;
+}
+#ipvalue {
+	opacity: 0;
+	cursor: context-menu;
+	position:fixed;
+}
+#CopyIP {
+	cursor: pointer;
+}
+.seekutils .block li {
+    margin: 15px 0px 15px 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #7b7b7b;
+    list-style-type: none;
+}
+.seekutils .block ul {
+    padding: 0;
+}
+.seekutils .block li a {
+	color: #2c3e50;
+}
+.seek_themechanger {
+	position: fixed;
+	left: 0;
+	top: 50%;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+	padding: 10px;
+	border-bottom-right-radius: 8px;
+	border-top-right-radius: 8px;
+	cursor: pointer;
+	z-index: 999;
+	user-select: none;
+	line-height: 1;
+	background: #fff;
+    color: #272727;
+    font-size: 20px;
+}
+.dark .seek_themechanger {
+	background: #272727;
+    color: #fff;
+}
+@media (max-width: 991px){
+    footer .seekrow {
+        flex-direction: column;
+    }
+    .seekrow .right img {
+        margin: auto;
+    }
+    .seek_themechanger {
+        top: unset;
+        bottom: 12px;
+    }
+}
+.item-footer button {
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+    background: #61ec70;
+    border: transparent;
+    border-bottom: 3px solid #5eda64;
+    font-weight: bold;
+	text-transform: uppercase;
+}
+.item-footer button:hover, .item-footer button:focus , .item-footer button.focus, .item-footer button:focus:active, .item-footer button:hover:active {
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	background: #51c55d;
+	border: transparent;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.announce .bar .text p {
+	margin: 0;
+}
+.btn-primary {
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+	background: #51c55d;
+    border: transparent;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:focus:active, .btn-primary:hover:active {
+	background: #44ad4f;
+}
+.btn-secondary {
+	padding: 8px;
+	background: #ff3939;
+	color: #fff;
+	border-radius: 4px;
+	border: 0;
+}
+.navbar-nav {
+    margin: 0;
+}
+body.dark {
+    background: #1b1b1b;
+    color: #e2e2e2;
+}
+.dark .panel-default {
+    background: #272727;
+    border: unset;
+}
+.dark .profile {
+    background: #272727;
+}
+.dark .profile .information .info .main {
+    color: #c1c1c1;
+}
+.dark .profile .information .info .sub {
+    color: #fff;
+}
+.dark .navbar-nav>li {
+    background: #272727;
+}
+.dark .navbar-default .navbar-nav>li>a {
+    color: #e2e2e2;
+}
+.dark .topdonator-module .data p.text {
+    color: #ececec;
+}
+.dark .top-donator .data b {
+    color: #ececec;   
+}
+.dark .seekcopyright {
+    background: #404040;
+}
+.dark .seekrow .block .title {
+    color: #ececec;
+}
+.dark .seekutils .block li a {
+    color: #c5c5c5;
+}
+.dark footer .seekutils {
+    background: #333333;
+}
+.dark .modal-content {
+    background-color: #272727;
+}
+.dark .modal-header {
+    border-bottom: 1px solid #4e4e4e;
+}
+.dark .modal-footer {
+    border-top: 1px solid #4e4e4e;
+}
+
+.dark .navbar-nav>li>.dropdown-menu {
+    background: #272727;
+}
+.dark .navbar-default .navbar-nav>.open>a, .dark .navbar-default .navbar-nav>.open>a:hover, .dark .navbar-default .navbar-nav>.open>a:focus {
+    background: #272727; 
+    color: #e2e2e2;
+}
+.sk-cube-grid {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #fff;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+@keyframes fadeOut {
+ 0% {
+    opacity: 1;   
+ }
+ 100% {
+    opacity: 0; 
+     visibility: hidden;
+ }
+}
+
+#preloader {
+	position: fixed;
+	background: var(--main-color);
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	transition: 1s;
+}
+
+.loaded#preloader {
+    animation: fadeOut 0.8s ease-out;
+    animation-fill-mode: forwards;
+}
+.dark .dropdown-menu>li>a:hover, .dark .dropdown-menu>li>a:focus {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(255,255,255,0.2);
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(0,0,0,0.2);
+}
+.dropdown-menu>li>a {
+    color: #333;
+}
+.dark .dropdown-menu>li>a {
+    color: #fff;
+}
+.dark .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #1b1b1b;
+}
+.dark .input-group .form-control:first-child, .dark .form-control {
+    background: #1b1b1b;
+    border: 0;
+    color: #949494;
+}
+.dark .progress {
+    background-color: #1b1b1b;
+}
+.progress {
+    background-color: #efefef;
+    height: 20px;
+}
+.progress-bar {
+    background-color: var(--main-color);
+}
+.dark .quantity input {
+    background: #272727;
+    border: 0;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: var(--main-color-transparent);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 4px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+@media (max-width: 450px){
+    .seek-basket-reponsive {
+        overflow-x: scroll;   
+    }
+}
+.table-responsive {
+    border: 0;
+}
+.item-wrapper img {
+    margin: auto;
+}
+.dark hr {
+	border-top: 1px solid #383838;
+}
+.modal-currency {
+	margin: auto 0px auto 0px;
+}
+.modal-buttons {
+	margin-left: auto;
+}
+.dark .table-hover>tbody>tr:hover {
+    background-color: rgb(0,0,0,0.1);
+}
+.panel img {
+    max-width: 100%;
+    height: unset!important;
+}
+#particles-header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+}
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+@media (min-width: 768px) {
+    .body .sidebar {
+        width: 25%;
+    }
+    .body .content {
+        width: 75%;
+    }
+}
+.payments-module {
+    display: flex;
+}
+.payments-module .far {
+    margin: auto;
+    margin-right: 12px;
+    font-size: 20px;
+    color: #4e4e4e;
+}
+.module .payments {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+.module .seekdonator .avatar {
+    width: 64px;
+    height: 100px;
+    overflow: hidden;
+    margin-top: -10px;
+    margin-left: 10px
+}
+.module .seekdonator .avatar img {
+    width: 64px;
+    max-width: 64px!important;
+}
+.panel-body.seekdonator {
+    padding: 0;   
+} 
+.module .seekdonator {
+    display: flex;
+}
+.module .seekdonator .info {
+    float: unset;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 1; 
+}
+.module .seekdonator .info .ign {
+    margin: 0;
+    color: #373737;
+    font-weight: bold;
+    font-size: 15px;
+}
+.module .seekdonator .info .amount {
+    font-size: 10px;
+    color: #000000;
+}
+.dark  .module .seekdonator .info .ign {
+    color: #ececec;
+}
+.dark .module .seekdonator .info .amount {
+    color: #ececec;
+}
+.dark .table-striped > tbody > tr:nth-child(odd) > td, .dark .table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: transparent;
+}
+.dark .table > thead > tr > th, .table > tbody > tr > th, .dark .table > tfoot > tr > th, .dark .table > thead > tr > td, .dark .table > tbody > tr > td, .dark .table > tfoot > tr > td {
+    border-top: 1px solid #383838;
+}
+.dark .page-header {
+    border-bottom: 1px solid #383838;
+}
+.dark .table > thead > tr > th {
+    border-bottom: 2px solid #383838;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: 0;
+}
+@media (max-width: 767px){
+    .visible-desk {
+        display: none;
+    }
+}
+.basket-header {
+    background: #fff;
+    display: flex;
+    margin-top: 10px
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+.basket-header .avatar {
+    height: 110px;
+    overflow: hidden;
+    margin-top: -15px;
+    margin-left: 10px;
+}
+.basket-header .avatar img {
+    height: 170px;
+}
+.basket-header .details {
+    margin: auto auto auto 10px;
+}
+.basket-header .currency {
+    margin: auto 35px auto auto;
+}
+.basket-header .details .sub {
+    font-size: 10px;
+}
+.basket-items {
+    display: flow-root;
+    background: #fff;
+    margin-top: 10px;
+}
+.basket-item {
+	display: flex;
+    margin: 10px;
+    padding: 15px;
+    background: #EFEFEF;
+}
+.basket-item .remove {
+    margin: auto;
+    margin-right: 10px;
+}
+
+.basket-item .remove i {
+	color: #F44336;
+}
+.basket-item .remove i {
+	color: #D32F2F;
+}
+
+.basket-item .product .name {
+	color: var(--main-color);
+    font-weight: bold;
+}
+.basket-header .btn-default {
+    border: 0;
+    background: unset;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    border: 0;
+    background: unset;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+    color: #fff;
+    background: #e23636;;
+}
+.dark .basket-header {
+    background: #313131;
+}
+.dark .basket-items {
+    background: #313131;
+}
+.dark .basket-item {
+    background: #272727;
+}
+.dark .dropdown-menu {
+    background-color: #272727;
+}
+.category .packages-image .package .info .text {
+    float: unset;
+    width: 100%;
+    height: unset;
+    text-align: center;
+}
+.category .packages-image .package .info .button {
+    float: unset;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.category .packages-image .package .info {
+    margin: 5px auto 0px auto;
+}
+.category .packages-image .package .info .btn-info {
+    background: #51c55d;
+    border: transparent;
+    border-bottom: 3px solid #5eda64;
+}
+.category .packages-image .package .info .text .name {
+    font-size: 14px;
+}
+.nav .dropdown-menu {
+    position: unset;
+    float: unset;
+    border: 0;
+    box-shadow: unset;
+    border-left: 4px solid var(--main-color);
+}
+.module .header {
+    background: unset;
+}
+@media (min-width: 768px){
+   .checkout .packages table tbody .buttons {
+       min-width: 130px;
+   }
+}
+.payments img {
+    border-radius: 4px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: var(--main-color);
+}
+.checkout .gateways .radio img {
+    height: 34px!important;
+}
+.notification {
+    position: absolute;
+    z-index: 9999;
+    right: 15px;
+    bottom: 15px;
+    width: 25%;
+}</style>
+
+  </head>
+  <body>
+    <div id="preloader">
+        <div class="sk-cube-grid">
+          <div class="sk-cube sk-cube1"></div>
+          <div class="sk-cube sk-cube2"></div>
+          <div class="sk-cube sk-cube3"></div>
+          <div class="sk-cube sk-cube4"></div>
+          <div class="sk-cube sk-cube5"></div>
+          <div class="sk-cube sk-cube6"></div>
+          <div class="sk-cube sk-cube7"></div>
+          <div class="sk-cube sk-cube8"></div>
+          <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>   
+    <div class="seek_themechanger" onclick="changetheme();">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <div class="header">
+
+        <div class="topbar">
+            <div class="container">
+                <div class="topbar-items">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i> <span class="text">Home</span></a></li>
+                </ul>
+                <div class="topbar-server" id="CopyIP">
+                    <div class="text">JOIN <b id="online">0</b> PLAYERS ONLINE</div>
+                    <div class="ip" id="ip">loading...</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo">
+                            <a href="index.htm"><img src="//dunb17ur4ymx4.cloudfront.net/webstore/logos/51c8947b1e692a53090af07c08d1b365a1bc275f.png"></a>
+                    </div>
+        <div class="headerbg"></div>
+        <div id="particles-header"></div>
+      </div>
+      
+    <div class="container">
+    <input type="text" id="ipvalue" value="loading...">
+        
+      <div class="notification">
+          
+      </div>
+
+      	<div class="body">
+		<div class="sidebar">
+		<div class="profile">
+			<div class="information">
+				<div class="avatar">
+					<img src="https://minotar.net/avatar/Steve">
+					</div>
+					<div class="info">
+						<div class="main">Logged as</div>
+						<div class="sub">Guest</div>
+					</div>
+					<div class="settings">
+						<div class="logout visible-desk">
+                            							<a href="login.htm">
+								<i data-toggle="tooltip" title="Click to login" class="fas fa-sign-in-alt"></i>
+							</a>
+                                                            
+						</div>
+											</div>
+				</div>
+			</div>	    
+          <nav class="navbar navbar-default" role="navigation">
+    
+              <div class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.htm">Home</a></li>
+                                                                  <li class=""><a href="category\plus-subscription.htm">⭐ Plus</a></li>
+                                                                                        <li class="sleek-dropdown dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">💎 Ranks <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                                              <li><a href="category\ranks-temporarily.htm">Temporarily</a></li>
+                                                              <li><a href="category\ranks-permanent.htm">Permanent</a></li>
+                                                              <li><a href="category\ranks-upgrade.htm">Upgrade</a></li>
+                                                          </ul>
+                                                                                        <li class="sleek-dropdown dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">🏹 Kits <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                                              <li><a href="category\kits-legendary.htm">Global</a></li>
+                                                              <li><a href="category\kits-hcf.htm">HCF</a></li>
+                                                              <li><a href="category\kits-uhcf.htm">UHCF</a></li>
+                                                          </ul>
+                                                                                        <li class="sleek-dropdown dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">💜 Perk Keys <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                                              <li><a href="category\perk-hcf.htm">HCF</a></li>
+                                                              <li><a href="category\perk-kits.htm">Kits</a></li>
+                                                              <li><a href="category\perk-uhcf.htm">UHCF</a></li>
+                                                          </ul>
+                                                                                        <li class="sleek-dropdown dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">🔑 Keys <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                                              <li><a href="category\keys-hcf.htm">HCF</a></li>
+                                                              <li><a href="category\keys-kits.htm">Kits</a></li>
+                                                              <li><a href="category\keys-uhcf.htm">UHCF</a></li>
+                                                          </ul>
+                                                                                        <li class="sleek-dropdown dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">🏅 Tags <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                                              <li><a href="category\tags-commons.htm">Commons</a></li>
+                                                              <li><a href="category\tags-countries.htm">Countries</a></li>
+                                                              <li><a href="category\tags-symbols.htm">Symbols</a></li>
+                                                              <li><a href="category\tags-specials.htm">Specials</a></li>
+                                                              <li><a href="category\tags-custom.htm">Custom</a></li>
+                                                          </ul>
+                                                                                        <li class="sleek-dropdown dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">🎩 Cosmetics <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                                              <li><a href="category\cosmetics-trails.htm">Trails</a></li>
+                                                              <li><a href="category\cosmetics-killeffects.htm">Kill Effects</a></li>
+                                                              <li><a href="category\cosmetics-particles.htm">Particles</a></li>
+                                                              <li><a href="category\cosmetics-pets.htm">Pets</a></li>
+                                                              <li><a href="category\cosmetics-gadgets.htm">Gadgets</a></li>
+                                                              <li><a href="category\cosmetics-suits.htm">Suits</a></li>
+                                                          </ul>
+                                                                                        <li class=""><a href="category\other.htm">🚀 Other</a></li>
+                                                                              
+                                    </li></li></li></li></li></li></ul>
+              </div>
+          </nav>		    
+			<div class="panel panel-default module">
+    <div class="panel-body seekdonator">
+                      <div class="avatar">
+                <img src="https://qseek.org/api/skins/body.php?user=charakox" width="40">
+              </div>
+              <div class="info">
+                <div class="ign">charakox</div>
+                <div class="amount">
+                                            Donated the most 
+                                        
+                                            this month.
+                                    </div>
+              </div>
+            </div>
+</div><div class="panel panel-default module">
+    <div class="panel-body">
+      <div class="payments-module"> 
+          <i class="far fa-credit-card"></i>
+          <div class="payments">
+                              <div class="avatar" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>Afecciones</b><br>10x1 Perk Key
+                        ">
+                    <img src="https://cravatar.eu/avatar/Afecciones/64" width="28">
+                  </div>
+                              <div class="avatar" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>iMarcelooH</b><br>3x1 Perk Key
+                        ">
+                    <img src="https://cravatar.eu/avatar/iMarcelooH/64" width="28">
+                  </div>
+                              <div class="avatar" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>tontoctm</b><br>1 Perk Key
+                        ">
+                    <img src="https://cravatar.eu/avatar/tontoctm/64" width="28">
+                  </div>
+                              <div class="avatar" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>ssufronh</b><br>10x1 Perk Key
+                        ">
+                    <img src="https://cravatar.eu/avatar/ssufronh/64" width="28">
+                  </div>
+                              <div class="avatar" data-toggle="tooltip" data-placement="top" data-html="true" title="<b>HijoDeqwzu</b><br>10x1 Perk Key
+                        ">
+                    <img src="https://cravatar.eu/avatar/HijoDeqwzu/64" width="28">
+                  </div>
+                      </div>
+      </div>
+    </div>
+</div>    <div class="panel panel-default module">
+        <div class="panel-heading">🏆 Top Rank 🏆</div>
+        <div class="panel-body">
+          <div class="featured-package">
+            <div class="image">
+                <a href="javascript:void(0);" data-remote="/package/4870367" class="toggle-modal">
+                    <img src="//dunb17ur4ymx4.cloudfront.net/packages/images/01771ec3b7befcdbc87810168ae368efc98971b0.png" class="toggle-tooltip img-rounded" title="Click for more details">
+                </a>
+            </div>
+            <div class="info">
+              <div class="text">
+                <div class="name">Advanced</div>
+                <div class="price">
+                        					          					<span class="discount">420.40</span>
+          				    					210.20 <small>BRL</small>
+    				                </div>
+              </div>
+              <div class="button">
+                                    <a href="javascript::void(0);" data-remote="/package/4870367" class="btn btn-info btn-sm btn-block toggle-modal">Buy</a>
+                              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<div class="panel panel-default module box-container" id="giftcardbalance">
+    <div class="panel-heading">
+        <div class="header" style="margin-top:0px;margin-bottom:0px;">💳 Giftcard Balance 💳</div>
+    </div>
+    <div class="panel-body content" style="width:auto;float:none;">
+        <div class="giftcardbalance" style="text-align:center;">
+            <form action='#giftcardbalance' method='post'>
+                <div class="input-group">
+                    <input type="text" name="card_number" placeholder="Card Number" class="form-control" value="">
+                    <div class="input-group-btn"><button class="btn btn-primary">Check <i class="fa fa-arrow-right"></i></button></div>
+                </div>
+               
+                                 
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">🌐 Information 🌐</div>
+    <div class="panel-body">
+        <p>
+     		<p>We are not affiliated in any way with <strong>Mojang AB©</strong> , for support please contact us via email at <strong>support@dynamicpvp.net</strong></p>
+     	</p>
+    </div>
+</div>
+		</div>	    
+		<div class="content">
+			<div class="panel panel-default">
+				<div class="panel-body">
+                    <div class="announce">
+                        <div class="bar">
+                            <i class="fas fa-bullhorn"></i>
+                            <span class="text">¿Necesitas ayuda o tienes dudas? Únete a nuestro DISCORD donde ofrecemos soporte</span>
+                            <div class="button">
+                                <a href="https://discord.gg/XpGVDZ49GP">Discord</a>
+                            </div>
+                            <div id="particles-js"></div>
+                        </div>
+                    </div>				    
+					<p>
+				  		<p style="text-align:center;"><br></p><p style="text-align:center;"><img src="https://dunb17ur4ymx4.cloudfront.net/wysiwyg/1084905/557ddb861b7f6d121882d8401f7a8c0518048aa7.png" style="width:435px;height:163.94px;" class="fr-fic fr-dib" width="435" height="163" alt="557ddb861b7f6d121882d8401f7a8c0518048aa7.png"><br><br><br></p><p style="text-align:center;"><img src="https://dunb17ur4ymx4.cloudfront.net/wysiwyg/1084905/55ce50a3ef514bb52f424e60fb53b587957d1ede.png" width="215" alt="55ce50a3ef514bb52f424e60fb53b587957d1ede.png" class="fr-fic fr-dii" style="width:215px;height:244.383px;" height="244"></p><p><br></p><p style="text-align:center;"><strong>Terms and Conditions</strong></p><p style="text-align:center;">By donating you accept our terms and conditions. Please read them carefully. </p><p style="text-align:center;"> <a href="terms.htm">Go to terms and conditions</a> </p><p style="text-align:center;"><img src="https://dunb17ur4ymx4.cloudfront.net/wysiwyg/1084905/f9fad686a3366779c00868d2caf881aa766134f4.png" style="width:796px;height:160.979px;" class="fr-fic fr-dib" width="796" alt="f9fad686a3366779c00868d2caf881aa766134f4.png" height="160"><br><img src="https://dunb17ur4ymx4.cloudfront.net/wysiwyg/1084905/f43b254467ad15e466daac0b6537ee775c7984ac.png" style="width:323px;height:94.7353px;" class="fr-fic fr-dib" width="323" alt="f43b254467ad15e466daac0b6537ee775c7984ac.png" height="94"></p><p style="text-align:center;"><img src="https://dunb17ur4ymx4.cloudfront.net/wysiwyg/1084905/898169981c6bec1fbe56cdbe6b20dcd5d7f3f762.png" style="width:759px;height:216.58px;" class="fr-fic fr-dib" width="759" alt="898169981c6bec1fbe56cdbe6b20dcd5d7f3f762.png" height="216"><img src="https://dunb17ur4ymx4.cloudfront.net/wysiwyg/1084905/e56db83519b1a7ae783ed9aa4fd7e18c2eb9b0e1.png" style="width:1170px;height:981.568px;" class="fr-fic fr-dib" width="1170" alt="e56db83519b1a7ae783ed9aa4fd7e18c2eb9b0e1.png" height="981"></p>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+particlesJS("particles-js", {"particles":{"number":{"value":400,"density":{"enable":true,"value_area":800}},"color":{"value":"#fff"},"shape":{"type":"edge","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":500,"color":"#ffffff","opacity":0.4,"width":2},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"71231"},"onclick":{"enable":false,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+</script>	
+
+          
+    </div>
+    <footer class="footer">
+        <div class="seekutils">
+            <div class="container">
+                <div class="seekrow">
+                    <div class="block">
+                                                    <img src="//dunb17ur4ymx4.cloudfront.net/webstore/logos/51c8947b1e692a53090af07c08d1b365a1bc275f.png">
+                                            </div>
+                    <div class="block">
+                        <div class="title">About Us</div>
+                        <div class="text">Network de Minecraft dedicada al HCF, Kits y PotPvP. También organizamos eventos de UHC y eventos casi a diario. Que esperas a unirte! DynamicPvP</div>
+                    </div>      
+                    <div class="block">
+                        <div class="title">Quick Links</div>
+                        <ul>
+                            <li><a href="">Forums</a></li>
+                            <li><a href="">Discord</a></li>
+                            <li><a href="">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seekcopyright">
+            <div class="container">
+                <div class="seekrow">
+                    <div class="left"><span>© Copyright DynamicPvP. 2022 All Rights Reserved.</span></div>
+                </div>
+            </div>    
+        </div>
+    </footer>
+    <!-- Basket -->
+    <div class="modal fade" id="basketModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="basket-header">
+                <div class="avatar"><img src="https://qseek.org/api/skins/body.php?user=Steve"></div>
+                <div class="details"><b>Guest</b><br><span class="sub">0 ITEM | 0.00 BRL</span></div>
+                <div class="currency">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        BRL <span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                                                 <li>
+                            <a href="index-1.htm?currency=AUD">AUD</a>
+                        </li>
+                                                  <li class="active">
+                            <a href="index-2.htm?currency=BRL">BRL</a>
+                        </li>
+                                                  <li>
+                            <a href="index-3.htm?currency=CAD">CAD</a>
+                        </li>
+                                                    <li>
+                            <a href="index-4.htm?currency=DKK">DKK</a>
+                        </li>
+                                                  <li>
+                            <a href="index-5.htm?currency=EUR">EUR</a>
+                        </li>
+                                                              <li>
+                            <a href="index-6.htm?currency=NOK">NOK</a>
+                        </li>
+                                                  <li>
+                            <a href="index-7.htm?currency=NZD">NZD</a>
+                        </li>
+                                                    <li>
+                            <a href="index-8.htm?currency=PLN">PLN</a>
+                        </li>
+                                                  <li>
+                            <a href="index-9.htm?currency=GBP">GBP</a>
+                        </li>
+                                                    <li>
+                            <a href="index-10.htm?currency=SEK">SEK</a>
+                        </li>
+                                                          <li>
+                            <a href="index-11.htm?currency=USD">USD</a>
+                        </li>
+                                                                       </ul>
+                </div>
+            </div>
+            <div class="basket-items">
+                                    </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="checkout\basket.htm"><button type="button" class="btn btn-primary">Checkout</button></a> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="popup-modal" tabindex="-1" role="dialog"></div>
+    
+        
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="templates\209\js\bootstrap.min.js"></script>
+    <script src="templates\209\js\skin.min.js"></script>
+    <script src="templates\209\js\site.js"></script>
+     <script>
+            jQuery(function(){
+                var countdowns = $(".countdown-to");
+                countdowns.each(function(){
+                   setInterval(function(ele) {
+                       timeLeft = parseInt(ele.attr("data-countdown"));
+                       if (timeLeft == 0) {
+                           ele.html("Time Expired!");
+                       } else {
+                       timeLeft--;
+                       ele.attr("data-countdown", timeLeft);
+                      var days = Math.floor(timeLeft / (60 * 60 * 24));
+                      var hours = Math.floor((timeLeft % (60 * 60 * 24)) / (60 * 60));
+                      var minutes = Math.floor((timeLeft % (60 * 60)) / (60));
+                      var seconds = Math.floor((timeLeft % 60));
+                      ele.html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                       }
+                   }, 1000, jQuery(this));
+                });
+            });
+
+        </script>
+        <script>
+        document.getElementById('ipvalue').value = serverip;
+        document.getElementById('ip').textContent = serverip;
+    
+        $.getJSON(`https://api.minetools.eu/ping/${serverip}/${port}`, function (data) {
+    
+            if (data.error === undefined) {
+                document.getElementById('online').textContent = data.players.online;
+            } else {
+    
+            }
+        });
+    		
+    		var copyip = document.getElementById('CopyIP');
+    		copyip.addEventListener('click', Copy);
+    		
+    		function Copy(){
+    					Swal.fire(
+    							'IP Copied!',
+    							'We hope to see you online soon!',
+    							'success'
+    					);
+    		  document.getElementById("ipvalue").select(),document.execCommand("copy");
+    		}
+    </script>
+        <script>
+        function changetheme(){
+            var theme = $.cookie('theme');
+            if(theme != undefined){
+                $.removeCookie('theme', { path: '/' });
+                if(theme == "light"){
+                    $( "body" ).addClass("dark"); 
+                    $.cookie("theme", "dark", { path: '/' });
+                }else {
+                    $('body').toggleClass('dark');
+                    $.cookie("theme", "light", { path: '/' });
+                }
+                
+            }else {
+                    if(default_theme != "light"){
+                        $( "body" ).toggleClass("dark"); 
+                        $.cookie("theme", "light", { path: '/' });
+                    }else {
+                        $( "body" ).addClass("dark"); 
+                        $.cookie("theme", "dark", { path: '/' }); 
+                    }
+                }
+            
+        }
+
+    </script>
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+      var theme = $.cookie('theme');
+      if(theme != undefined){
+        if(theme != "light"){
+            $( "body" ).addClass("dark");
+        }
+      }else {
+          if(default_theme != "light"){
+            $( "body" ).addClass("dark");
+          }
+      }
+      $("#preloader").addClass("loaded");
+    });
+    $('.sleek-dropdown').on('show.bs.dropdown', function () {
+        $(this).find(".dropdown-menu").first().stop(!0, !0).slideDown(200);
+    });
+    $('.sleek-dropdown').on('hide.bs.dropdown', function () {
+        $(this).find(".dropdown-menu").first().stop(!0, !0).slideUp(200);
+    });
+    </script>
+    <script>
+    $(function() {
+        if(particles_enabled){
+            particlesJS("particles-header", {"particles":{"number":{"value":400,"density":{"enable":true,"value_area":800}},"color":{"value":"#fff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.31,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":500,"color":"#ffffff","opacity":0.4,"width":2},"move":{"enable":true,"speed":4,"direction":"top","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"71231"},"onclick":{"enable":false,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+        }
+    });
+    </script>    
+  <script>	
+    jQuery(".card-container").eq(0).remove();	
+</script>	
+<script type="text/javascript" src="assets\js\discord.js"></script>
+<div id="waiting-overlay" style="display: none;">	
+    <i class="fa fa-cog fa-spin fa-3x"></i>	
+</div>
+</body>
+</html>
